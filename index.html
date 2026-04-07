@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icarus — Item Comparer</title>
+  <meta name="description" content="Compare all tools, weapons and armor in the survival game ICARUS side by side." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════  HEADER  ═══════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">🪐</span>
+      <div class="logo-text">
+        <span class="logo-title" id="logo-title">ICARUS</span>
+        <span class="logo-sub" id="logo-sub">Item Comparer</span>
+      </div>
+    </div>
+    <p class="header-desc" id="header-desc">Professional comparison tool for prospects in Icarus.</p>
+    
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" id="lang-ua" onclick="setLanguage('ua')">UA</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════  CATEGORY TABS  ═══════════════════════════ -->
+<nav class="category-nav" id="category-nav">
+  <!-- filled by JS -->
+</nav>
+
+<!-- ═══════════════════════════  MAIN LAYOUT  ═══════════════════════════ -->
+<main class="main-layout">
+
+  <!-- LEFT PANEL — ITEM PICKER -->
+  <aside class="panel panel-picker" id="picker-panel">
+    <div class="panel-header">
+      <div class="panel-header-top">
+        <h2 class="panel-title" id="picker-title">Items</h2>
+        <select class="sort-select" id="sort-select" onchange="changeSort(this.value)">
+          <option value="default" data-i18n="sort_default">Default</option>
+          <option value="maxHealth">Max Health ↓</option>
+          <option value="maxStamina">Max Stamina ↓</option>
+        </select>
+      </div>
+      <span class="panel-hint" id="picker-hint">Click to add to comparison</span>
+    </div>
+    <div class="item-grid" id="item-grid">
+      <!-- filled by JS -->
+    </div>
+  </aside>
+
+  <!-- RIGHT PANEL — COMPARISON TABLE -->
+  <section class="panel panel-compare" id="compare-panel">
+    <div class="panel-header">
+      <div class="panel-header-top">
+        <h2 class="panel-title" id="compare-title">Comparison</h2>
+        <button class="btn-clear" id="btn-clear" onclick="clearSelection()" data-i18n="clear_all">Clear</button>
+      </div>
+    </div>
+
+    <!-- empty state -->
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">⚖️</div>
+      <p id="empty-text">Select 2 or more items from the left to compare them side-by-side.</p>
+    </div>
+
+    <!-- comparison content -->
+    <div class="compare-content" id="compare-content" style="display:none">
+      <!-- headers row -->
+      <div class="compare-table" id="compare-table">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════  TOOLTIP  ═══════════════════════════ -->
+<div class="tooltip" id="tooltip"></div>
+
+<script src="i18n.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
