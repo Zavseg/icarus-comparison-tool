@@ -12,7 +12,29 @@ const selectedIds    = new Set();
 
 // ── i18n Helper ────────────────────────────────────────────────
 function t(key) {
-  return I18N[currentLang][key] || key;
+  if (typeof I18N === 'undefined') {
+    console.error("I18N is not defined!");
+    return key;
+  }
+  const lang = currentLang || 'en';
+  if (!I18N[lang]) {
+    console.warn(`Language ${lang} not found in I18N, falling back to English`);
+    return I18N['en'][key] || key;
+  }
+  return I18N[lang][key] || key;
+}
+
+// ── Icons Helper (Supports Emojis and SVGs) ─────────────────────
+const SVG_ICONS = {
+  crossbow: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; vertical-align:middle; position:relative; top:-1px;"><path d="M20 12h-8M12 12L4 4M12 12l-8 8M12 4v16M18 4a8 8 0 0 0 0 16" /></svg>`
+};
+
+function getIcon(iconKey) {
+  if (iconKey.startsWith('svg_')) {
+    const key = iconKey.replace('svg_', '');
+    return SVG_ICONS[key] || '❓';
+  }
+  return iconKey;
 }
 
 function setLanguage(lang) {
@@ -29,30 +51,58 @@ function setLanguage(lang) {
 }
 
 function updateStaticTranslations() {
-  document.getElementById('logo-sub').textContent = t('app_sub');
-  document.getElementById('header-desc').textContent = t('header_desc');
-  document.getElementById('picker-title').textContent = t('cat_' + currentCategory);
-  document.getElementById('picker-hint').textContent = t('picker-hint');
-  document.getElementById('compare-title').textContent = t('ready_to_compare');
-  document.getElementById('btn-clear').textContent = t('clear_all');
-  document.getElementById('empty-text').textContent = t('empty_hint');
+  const elements = {
+    'logo-sub': 'app_sub',
+    'header-desc': 'header_desc',
+    'picker-title': 'cat_' + currentCategory,
+    'picker-hint': 'picker_hint',
+    'compare-title': 'ready_to_compare',
+    'btn-clear': 'clear_all',
+    'empty-text': 'empty_hint'
+  };
+
+  for (const [id, key] of Object.entries(elements)) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(key);
+  }
   
   // Sort dropdown
   const sortSelect = document.getElementById('sort-select');
-  sortSelect.options[0].textContent = t('sort_default');
-  // (We could localize other sort options if we dynamicallly built them)
+  if (sortSelect && sortSelect.options[0]) {
+    sortSelect.options[0].textContent = t('sort_default');
+  }
+
+  // Initial update for Select All button
+  updateSelectAllButtonText();
+}
+
+function updateSelectAllButtonText() {
+  const selectBtn = document.getElementById('btn-select-all');
+  if (!selectBtn) return;
+  
+  const cat = ICARUS_DATA[currentCategory];
+  if (!cat) return;
+
+  const allIds = cat.items.map(i => i.id);
+  const allSelected = allIds.every(id => selectedIds.has(id));
+  selectBtn.textContent = allSelected ? t('deselect_all') : t('select_all');
 }
 
 // ── Boot ───────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
+  // Ensure we have a valid language
+  if (!I18N[currentLang]) currentLang = 'en';
+  
   setLanguage(currentLang);
   
   // Observe header height for sticky panels
-  const resizeObserver = new ResizeObserver(() => {
-    const headerHeight = document.querySelector('.sticky-header-wrapper')?.offsetHeight || 0;
-    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
-  });
-  resizeObserver.observe(document.querySelector('.sticky-header-wrapper'));
+  const headerWrapper = document.querySelector('.sticky-header-wrapper');
+  if (headerWrapper) {
+    const resizeObserver = new ResizeObserver(() => {
+      document.documentElement.style.setProperty('--header-height', headerWrapper.offsetHeight + 'px');
+    });
+    resizeObserver.observe(headerWrapper);
+  }
 });
 
 // ══════════════════════════════════════════════════════════════
@@ -65,7 +115,7 @@ function buildCategoryNav() {
     const btn = document.createElement('button');
     btn.className = 'cat-tab';
     btn.id        = `tab-${key}`;
-    btn.innerHTML = `<span class="cat-tab-icon">${cat.icon}</span>${t('cat_' + key)}`;
+    btn.innerHTML = `<span class="cat-tab-icon">${getIcon(cat.icon)}</span>${t('cat_' + key)}`;
     btn.addEventListener('click', () => switchCategory(key));
     nav.appendChild(btn);
   });
@@ -144,6 +194,24 @@ function renderPickerPanel() {
 
     grid.appendChild(card);
   });
+
+  // 3. Update 'Select All' button text
+  updateSelectAllButtonText();
+}
+
+function toggleSelectAll() {
+  const cat = ICARUS_DATA[currentCategory];
+  const allIds = cat.items.map(i => i.id);
+  const allSelected = allIds.every(id => selectedIds.has(id));
+
+  if (allSelected) {
+    allIds.forEach(id => selectedIds.delete(id));
+  } else {
+    allIds.forEach(id => selectedIds.add(id));
+  }
+  
+  renderPickerPanel();
+  renderComparePanel();
 }
 
 function toggleItem(id) {

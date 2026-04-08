@@ -158,7 +158,7 @@ const ICARUS_DATA = {
   // ──────────────────────────────────────────────────────────
   crossbows: {
     label: "Crossbows",
-    icon: "🎯",
+    icon: "svg_crossbow",
     stats: [
       { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
       { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 60000 },
@@ -208,6 +208,7 @@ const ICARUS_DATA = {
       { id: "ar_iron", name: "Iron Armor", tier: 1, armor: 38, heat: 12, cold: 10, color: "#78909C", setBonus: "-5% Movement Speed Penalty", special: ["Heavy"] },
       { id: "ar_steel", name: "Steel Armor", tier: 2, armor: 60, heat: 18, cold: 14, color: "#546E7A", setBonus: "-10% Damage Taken", special: [] },
       { id: "ar_composite", name: "Composite Armor", tier: 4, armor: 85, heat: 28, cold: 22, color: "#FF7043", setBonus: "+15% Physical Resistance", special: ["Lighter than steel"] },
+      { id: "ar_obsidian", name: "Obsidian Armor", tier: 4, armor: 95, heat: 35, cold: 10, color: "#311B92", setBonus: "Firewalker (Immune to Fire)", special: ["Prometheus Tier 4", "Extreme heat protection"] },
       { id: "ar_hunter", name: "Hunter Armor", tier: 3, armor: 65, heat: 15, cold: 15, color: "#795548", setBonus: "+10% Perceieved Stealth", special: ["Great for stalking prey"] },
       { id: "ar_polarbear", name: "Polar Bear Armor", tier: 3, armor: 70, heat: 0, cold: 45, color: "#FFFFFF", setBonus: "+15% Cold Resistance", special: ["Arctic Biome Savior"] },
       { id: "ar_naneo", name: "Naneo Armor", tier: "W", armor: 25, heat: 15, cold: 15, color: "#ECEFF1", setBonus: "+5% Movement Speed", special: ["Workshop Item", "Lightweight"] },
