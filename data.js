@@ -14,11 +14,11 @@ const ICARUS_DATA = {
     label: "Pickaxes",
     icon: "⛏️",
     stats: [
-      { key: "tier",          label: "Tier",            unit: "",    higher: false, type: "number" },
-      { key: "durability",    label: "Durability",      unit: "",    higher: true,  type: "bar",   max: 150000 },
-      { key: "miningYield",   label: "Mining Yield",    unit: "%",   higher: true,  type: "bar",   max: 160 },
-      { key: "miningRadius",  label: "Mining Radius",   unit: "",    higher: true,  type: "bar",   max: 100 },
-      { key: "weight",        label: "Weight",          unit: " kg", higher: false, type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 150000 },
+      { key: "miningYield", label: "Mining Yield", unit: "%", higher: true, type: "bar", max: 160 },
+      { key: "miningRadius", label: "Mining Radius", unit: "", higher: true, type: "bar", max: 100 },
+      { key: "weight", label: "Weight", unit: " kg", higher: false, type: "number" },
     ],
     items: [
       { id: "p_stone", name: "Stone Pickaxe", tier: 1, durability: 20000, miningYield: 100, miningRadius: 50, weight: 0.5, craftedAt: "Hand", color: "#9E9E9E", special: [] },
@@ -42,11 +42,11 @@ const ICARUS_DATA = {
     label: "Axes",
     icon: "🪓",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "durability",   label: "Durability",     unit: "",    higher: true,  type: "bar",   max: 160000 },
-      { key: "damage",       label: "Damage",         unit: "",    higher: true,  type: "bar",   max: 80 },
-      { key: "woodYield",    label: "Wood Yield",     unit: "%",   higher: true,  type: "bar",   max: 160 },
-      { key: "weight",       label: "Weight",         unit: " kg", higher: false, type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 160000 },
+      { key: "damage", label: "Damage", unit: "", higher: true, type: "bar", max: 80 },
+      { key: "woodYield", label: "Wood Yield", unit: "%", higher: true, type: "bar", max: 160 },
+      { key: "weight", label: "Weight", unit: " kg", higher: false, type: "number" },
     ],
     items: [
       { id: "a_stone", name: "Stone Axe", tier: 1, durability: 12000, damage: 12, woodYield: 100, weight: 0.5, color: "#9E9E9E", special: [] },
@@ -67,10 +67,10 @@ const ICARUS_DATA = {
     label: "Knives",
     icon: "🔪",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "durability",   label: "Durability",     unit: "",    higher: true,  type: "bar",   max: 80000 },
-      { key: "damage",       label: "Damage",         unit: "",    higher: true,  type: "bar",   max: 60 },
-      { key: "meatYield",    label: "Skinning Yield", unit: "%",   higher: true,  type: "bar",   max: 200 },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 80000 },
+      { key: "damage", label: "Damage", unit: "", higher: true, type: "bar", max: 60 },
+      { key: "meatYield", label: "Skinning Yield", unit: "%", higher: true, type: "bar", max: 200 },
     ],
     items: [
       { id: "k_bone", name: "Bone Knife", tier: 1, durability: 8000, damage: 9, meatYield: 100, color: "#D7CCC8", special: [] },
@@ -91,10 +91,10 @@ const ICARUS_DATA = {
     label: "Spears",
     icon: "🗡️",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "durability",   label: "Durability",     unit: "",    higher: true,  type: "bar",   max: 100000 },
-      { key: "damage",       label: "Melee Damage",   unit: "",    higher: true,  type: "bar",   max: 120 },
-      { key: "critDamage",   label: "Crit Bonus",     unit: "%",   higher: true,  type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 100000 },
+      { key: "damage", label: "Melee Damage", unit: "", higher: true, type: "bar", max: 120 },
+      { key: "critDamage", label: "Crit Bonus", unit: "%", higher: true, type: "number" },
     ],
     items: [
       { id: "s_wood", name: "Wood Spear", tier: 1, durability: 15000, damage: 45, critDamage: 10, color: "#8D6E63", special: [] },
@@ -116,9 +116,9 @@ const ICARUS_DATA = {
     label: "Javelins",
     icon: "🎯",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "projDamage",   label: "Thrown Damage",  unit: "",    higher: true,  type: "bar",   max: 250 },
-      { key: "stackSize",    label: "Stack Size",     unit: "",    higher: true,  type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "projDamage", label: "Thrown Damage", unit: "", higher: true, type: "bar", max: 250 },
+      { key: "stackSize", label: "Stack Size", unit: "", higher: true, type: "number" },
     ],
     items: [
       { id: "j_wood", name: "Wood Javelin", tier: 1, projDamage: 60, stackSize: 5, color: "#8D6E63", special: [] },
@@ -136,9 +136,9 @@ const ICARUS_DATA = {
     label: "Bows",
     icon: "🏹",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "durability",   label: "Durability",     unit: "",    higher: true,  type: "bar",   max: 60000 },
-      { key: "projDamage",   label: "Proj. Damage",   unit: "%",   higher: true,  type: "bar",   max: 130 },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 60000 },
+      { key: "projDamage", label: "Proj. Damage", unit: "%", higher: true, type: "bar", max: 130 },
     ],
     items: [
       { id: "b_wood", name: "Wood Bow", tier: 1, durability: 5000, projDamage: 0, color: "#8D6E63", special: [] },
@@ -160,9 +160,9 @@ const ICARUS_DATA = {
     label: "Crossbows",
     icon: "🏹",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "durability",   label: "Durability",     unit: "",    higher: true,  type: "bar",   max: 60000 },
-      { key: "projDamage",   label: "Proj. Damage",   unit: "%",   higher: true,  type: "bar",   max: 200 },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 60000 },
+      { key: "projDamage", label: "Proj. Damage", unit: "%", higher: true, type: "bar", max: 200 },
     ],
     items: [
       { id: "xb_wood", name: "Wooden Crossbow", tier: 2, durability: 10000, projDamage: 100, color: "#8D6E63", special: ["100% Armor Penetration"] },
@@ -179,9 +179,9 @@ const ICARUS_DATA = {
     label: "Firearms",
     icon: "🔫",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "damage",       label: "Base Damage",    unit: "",    higher: true,  type: "bar",   max: 600 },
-      { key: "magSize",      label: "Magazine",       unit: "",    higher: true,  type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "damage", label: "Base Damage", unit: "", higher: true, type: "bar", max: 600 },
+      { key: "magSize", label: "Magazine", unit: "", higher: true, type: "number" },
     ],
     items: [
       { id: "f_pistol", name: "Semi-Auto Pistol", tier: 4, damage: 180, magSize: 12, color: "#78909C", craftedAt: "Fabricator", craftCost: ["8× Steel Ingot", "4× Electronics", "2× Steel Screw"], special: ["Fast fire rate"], description: "Reliable sidearm for mid-range defense against aggressive predators." },
@@ -197,10 +197,10 @@ const ICARUS_DATA = {
     label: "Armor Sets",
     icon: "🛡️",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "armor",        label: "Armor Rating",   unit: "",    higher: true,  type: "bar",   max: 120 },
-      { key: "heat",         label: "Heat Resist",    unit: "%",   higher: true,  type: "number" },
-      { key: "cold",         label: "Cold Resist",    unit: "%",   higher: true,  type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "armor", label: "Armor Rating", unit: "", higher: true, type: "bar", max: 120 },
+      { key: "heat", label: "Heat Resist", unit: "%", higher: true, type: "number" },
+      { key: "cold", label: "Cold Resist", unit: "%", higher: true, type: "number" },
     ],
     items: [
       { id: "ar_hide", name: "Hide Armor", tier: 1, armor: 18, heat: 8, cold: 20, color: "#8D6E63", setBonus: "+5% Physical Resistance", special: [] },
@@ -208,8 +208,8 @@ const ICARUS_DATA = {
       { id: "ar_iron", name: "Iron Armor", tier: 1, armor: 38, heat: 12, cold: 10, color: "#78909C", setBonus: "-5% Movement Speed Penalty", special: ["Heavy"] },
       { id: "ar_steel", name: "Steel Armor", tier: 2, armor: 60, heat: 18, cold: 14, color: "#546E7A", setBonus: "-10% Damage Taken", special: [] },
       { id: "ar_composite", name: "Composite Armor", tier: 4, armor: 85, heat: 28, cold: 22, color: "#FF7043", setBonus: "+15% Physical Resistance", special: ["Lighter than steel"] },
-      { id: "ar_titanium", name: "Titanium Armor", tier: 4, armor: 110, heat: 22, cold: 18, color: "#4DB6AC", setBonus: "+20% Physical Resistance", special: ["Highest physical protection"] },
-      { id: "ar_miasmic", name: "Miasmic Armor", tier: 4, armor: 95, heat: 35, cold: 15, color: "#9C27B0", setBonus: "+25% Infection Resistance", special: ["Prometheus Specialty"] },
+      { id: "ar_hunter", name: "Hunter Armor", tier: 3, armor: 65, heat: 15, cold: 15, color: "#795548", setBonus: "+10% Perceieved Stealth", special: ["Great for stalking prey"] },
+      { id: "ar_polarbear", name: "Polar Bear Armor", tier: 3, armor: 70, heat: 0, cold: 45, color: "#FFFFFF", setBonus: "+15% Cold Resistance", special: ["Arctic Biome Savior"] },
       { id: "ar_naneo", name: "Naneo Armor", tier: "W", armor: 25, heat: 15, cold: 15, color: "#ECEFF1", setBonus: "+5% Movement Speed", special: ["Workshop Item", "Lightweight"] },
       { id: "ar_cx400", name: "CX-400 Armor", tier: "W", armor: 45, heat: 20, cold: 20, color: "#CFD8DC", setBonus: "+10% Mining/Felling Yield", special: ["Workshop Item", "Resource Specialist"] },
       { id: "ar_st700", name: "ST-700 Armor", tier: "W", armor: 35, heat: 25, cold: 25, color: "#455A64", setBonus: "+20% Stealth, +5% Movement", special: ["Workshop Item", "Infiltrator"] },
@@ -225,8 +225,8 @@ const ICARUS_DATA = {
     label: "Utility Packs",
     icon: "🎒",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "slots",        label: "Extra Slots",    unit: "",    higher: true,  type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "slots", label: "Extra Slots", unit: "", higher: true, type: "number" },
     ],
     items: [
       { id: "bp_leather", name: "Leather Backpack", tier: 2, slots: 6, color: "#8D6E63", craftedAt: "Crafting Bench", craftCost: ["20× Leather", "10× Fiber"], special: ["-10% Movement speed"], description: "Basic leather pack. Adds storage but the weight makes you slightly slower." },
@@ -243,12 +243,12 @@ const ICARUS_DATA = {
     icon: "🍱",
     grouped: true, // Internal flag for grouping UI
     stats: [
-      { key: "maxHealth",    label: "Max Health",     unit: "",    higher: true,  type: "bar",   max: 225 },
-      { key: "maxStamina",   label: "Max Stamina",    unit: "",    higher: true,  type: "bar",   max: 225 },
-      { key: "healthRegen",  label: "HP Regen",       unit: "%",   higher: true,  type: "bar",   max: 30 },
-      { key: "staminaRegen", label: "Stamina Regen",  unit: "%",   higher: true,  type: "bar",   max: 150 },
-      { key: "duration",     label: "Duration",       unit: "s",   higher: true,  type: "bar",   max: 3600 },
-      { key: "spoilTime",    label: "Spoil Time",     unit: "s",   higher: true,  type: "number" },
+      { key: "maxHealth", label: "Max Health", unit: "", higher: true, type: "bar", max: 225 },
+      { key: "maxStamina", label: "Max Stamina", unit: "", higher: true, type: "bar", max: 225 },
+      { key: "healthRegen", label: "HP Regen", unit: "%", higher: true, type: "bar", max: 30 },
+      { key: "staminaRegen", label: "Stamina Regen", unit: "%", higher: true, type: "bar", max: 150 },
+      { key: "duration", label: "Duration", unit: "s", higher: true, type: "bar", max: 3600 },
+      { key: "spoilTime", label: "Spoil Time", unit: "s", higher: true, type: "number" },
     ],
     items: [
       // CATEGORY: MEATS & JERKY
@@ -308,12 +308,12 @@ const ICARUS_DATA = {
     label: "Mounts & Pets",
     icon: "🐎",
     stats: [
-      { key: "health",       label: "Health",         unit: "",    higher: true,  type: "bar",   max: 6000 },
-      { key: "stamina",      label: "Stamina",        unit: "",    higher: true,  type: "bar",   max: 2000 },
-      { key: "speed",        label: "Sprint Speed",   unit: "%",   higher: true,  type: "bar",   max: 150 },
-      { key: "damage",       label: "Combat Damage",  unit: "",    higher: true,  type: "bar",   max: 200 },
-      { key: "defense",      label: "Melee Resist",   unit: "%",   higher: true,  type: "bar",   max: 100 },
-      { key: "slots",        label: "Cargo Slots",    unit: "",    higher: true,  type: "number" },
+      { key: "health", label: "Health", unit: "", higher: true, type: "bar", max: 6000 },
+      { key: "stamina", label: "Stamina", unit: "", higher: true, type: "bar", max: 2000 },
+      { key: "speed", label: "Sprint Speed", unit: "%", higher: true, type: "bar", max: 150 },
+      { key: "damage", label: "Combat Damage", unit: "", higher: true, type: "bar", max: 200 },
+      { key: "defense", label: "Melee Resist", unit: "%", higher: true, type: "bar", max: 100 },
+      { key: "slots", label: "Cargo Slots", unit: "", higher: true, type: "number" },
     ],
     items: [
       { id: "m_moa", name: "Moa", tier: 2, health: 500, stamina: 1200, speed: 120, damage: 25, defense: 5, slots: 10, color: "#81C784", special: ["Fastest in forests", "Extremely fragile"], description: "The scout's favorite. Excellent for crossing long distances quickly, but dies easily if caught by predators." },
@@ -343,10 +343,10 @@ const ICARUS_DATA = {
     label: "Wild Animals",
     icon: "🐾",
     stats: [
-      { key: "health",       label: "Base Health",    unit: "",    higher: true,  type: "bar",   max: 8000 },
-      { key: "damage",       label: "Attack Power",   unit: "",    higher: true,  type: "bar",   max: 400 },
-      { key: "speed",        label: "Movement",       unit: "",    higher: true,  type: "bar",   max: 150 },
-      { key: "hostility",    label: "Hostility",      unit: "",    higher: false, type: "number" }, // 1: Passive, 2: Territorial, 3: Aggressive
+      { key: "health", label: "Base Health", unit: "", higher: true, type: "bar", max: 8000 },
+      { key: "damage", label: "Attack Power", unit: "", higher: true, type: "bar", max: 400 },
+      { key: "speed", label: "Movement", unit: "", higher: true, type: "bar", max: 150 },
+      { key: "hostility", label: "Hostility", unit: "", higher: false, type: "number" }, // 1: Passive, 2: Territorial, 3: Aggressive
     ],
     items: [
       { id: "w_deer", name: "Deer", tier: 1, health: 120, damage: 0, speed: 100, hostility: 1, color: "#8D6E63", special: ["Skittish"] },
@@ -367,11 +367,11 @@ const ICARUS_DATA = {
     label: "Animal Care",
     icon: "🥣",
     stats: [
-      { key: "foodValue",    label: "Food Value",     unit: "",    higher: true,  type: "number" },
-      { key: "healthRegen",  label: "HP Regen",       unit: "/s",  higher: true,  type: "bar",   max: 50 },
-      { key: "staminaRegen", label: "Stamina Regen",  unit: "/s",  higher: true,  type: "bar",   max: 50 },
-      { key: "duration",     label: "Duration",       unit: "s",   higher: true,  type: "number" },
-      { key: "spoilTime",    label: "Spoil Time",     unit: "h",   higher: true,  type: "number" },
+      { key: "foodValue", label: "Food Value", unit: "", higher: true, type: "number" },
+      { key: "healthRegen", label: "HP Regen", unit: "/s", higher: true, type: "bar", max: 50 },
+      { key: "staminaRegen", label: "Stamina Regen", unit: "/s", higher: true, type: "bar", max: 50 },
+      { key: "duration", label: "Duration", unit: "s", higher: true, type: "number" },
+      { key: "spoilTime", label: "Spoil Time", unit: "h", higher: true, type: "number" },
     ],
     items: [
       { id: "af_seed", name: "Seed Animal Feed", tier: 1, foodValue: 100, healthRegen: 5, staminaRegen: 5, duration: 600, spoilTime: 8, color: "#81C784", special: ["Basic nutrition"], description: "Simple mixed seeds and fiber. Keeps your pet from starving but offers little else." },
@@ -394,9 +394,9 @@ const ICARUS_DATA = {
     label: "Envirosuits",
     icon: "👨‍🚀",
     stats: [
-      { key: "moduleSlots",  label: "Module Slots",   unit: "",    higher: true,  type: "number" },
-      { key: "suitSlots",    label: "Suit Slots",     unit: "",    higher: true,  type: "number" }, // O2/Water slots
-      { key: "physResist",   label: "Phys. Resist",   unit: "%",   higher: true,  type: "number" },
+      { key: "moduleSlots", label: "Module Slots", unit: "", higher: true, type: "number" },
+      { key: "suitSlots", label: "Suit Slots", unit: "", higher: true, type: "number" }, // O2/Water slots
+      { key: "physResist", label: "Phys. Resist", unit: "%", higher: true, type: "number" },
     ],
     items: [
       { id: "es_s5", name: "Xigo 'Hark' S5", tier: "W", moduleSlots: 2, suitSlots: 2, physResist: 10, color: "#78909C", special: ["Standard Choice", "Supports O2/Water Canteen"] },
@@ -413,8 +413,8 @@ const ICARUS_DATA = {
     label: "Modules",
     icon: "🔌",
     stats: [
-      { key: "tier",         label: "Tier",           unit: "",    higher: false, type: "number" },
-      { key: "effect",       label: "Main Bonus",     unit: "%",   higher: true,  type: "number" },
+      { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
+      { key: "effect", label: "Main Bonus", unit: "%", higher: true, type: "number" },
     ],
     items: [
       { id: "mod_mass", name: "Mass Dampener", tier: "W", effect: 5, color: "#4FC3F7", special: ["+5% Movement Speed", "Stackable"] },
@@ -431,8 +431,8 @@ const ICARUS_DATA = {
     label: "Projectiles",
     icon: "🎯",
     stats: [
-      { key: "damage",       label: "Base Damage",    unit: "",    higher: true,  type: "bar",   max: 150 },
-      { key: "armorPen",     label: "Armor Pen",      unit: "%",   higher: true,  type: "number" },
+      { key: "damage", label: "Base Damage", unit: "", higher: true, type: "bar", max: 150 },
+      { key: "armorPen", label: "Armor Pen", unit: "%", higher: true, type: "number" },
     ],
     items: [
       { id: "proj_flint", name: "Larkwell Flint Arrow", tier: "W", damage: 45, armorPen: 10, color: "#78909C", special: ["Workshop Starter Arrow", "Reusable"] },
@@ -449,8 +449,8 @@ const ICARUS_DATA = {
     label: "Survival Tools",
     icon: "🎒",
     stats: [
-      { key: "capacity",     label: "Capacity",       unit: "",    higher: true,  type: "bar",   max: 5000 },
-      { key: "weight",       label: "Weight",         unit: "kg",  higher: false, type: "number" },
+      { key: "capacity", label: "Capacity", unit: "", higher: true, type: "bar", max: 5000 },
+      { key: "weight", label: "Weight", unit: "kg", higher: false, type: "number" },
     ],
     items: [
       { id: "ut_canteen", name: "Workshop Canteen", tier: "W", capacity: 2000, weight: 1.0, color: "#4FC3F7", special: ["Never Leaks", "Large Capacity"] },
