@@ -20,6 +20,7 @@ A professional, high-performance web tool designed for prospects in the survival
 | :--- | :---: | :--- |
 | **Pickaxes** | ⛏️ | Stone to Titanium, Miasmic, and Workshop variants. |
 | **Bows** | 🏹 | Wood to Compound, plus the full Shengong series. |
+| **Crossbows** | 🎯 | Specialized ranged weapons with high armor penetration. |
 | **Armor** | 🛡️ | All T1-T4 sets with integrated **Set Bonuses**. |
 | **Mounts** | 🐎 | Wolves, Horses, Moa, Terrapin, and 2026 expansion mounts. |
 | **Wild Animals** | 🐆 | Combat stats for all major predators and prey in Icarus. |
@@ -32,15 +33,11 @@ A professional, high-performance web tool designed for prospects in the survival
 - **Data**: Centralized `data.js` database with easy expansion capabilities.
 - **Localization**: Custom `i18n.js` framework for persistent language selection.
 
-## 🛠️ Installation & Usage
+## 🌐 Live Access
 
-Since this is a client-side tool, you can simply run it locally:
+This is a fully public web-tool. No installation or local cloning is required.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Zavseg/icarus-comparison-tool.git
-   ```
-2. Open `index.html` in any modern browser.
+**🔗 [Open Icarus Item Comparer](https://zavseg.github.io/icarus-comparison-tool/)**
 
 ## 📝 Localization
 

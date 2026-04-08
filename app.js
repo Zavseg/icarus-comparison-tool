@@ -46,6 +46,13 @@ function updateStaticTranslations() {
 // ── Boot ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
+  
+  // Observe header height for sticky panels
+  const resizeObserver = new ResizeObserver(() => {
+    const headerHeight = document.querySelector('.sticky-header-wrapper')?.offsetHeight || 0;
+    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+  });
+  resizeObserver.observe(document.querySelector('.sticky-header-wrapper'));
 });
 
 // ══════════════════════════════════════════════════════════════

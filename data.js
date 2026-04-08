@@ -158,7 +158,7 @@ const ICARUS_DATA = {
   // ──────────────────────────────────────────────────────────
   crossbows: {
     label: "Crossbows",
-    icon: "🏹",
+    icon: "🎯",
     stats: [
       { key: "tier", label: "Tier", unit: "", higher: false, type: "number" },
       { key: "durability", label: "Durability", unit: "", higher: true, type: "bar", max: 60000 },

@@ -11,30 +11,35 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════  HEADER  ═══════════════════════════ -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <span class="logo-icon">🪐</span>
-      <div class="logo-text">
-        <span class="logo-title" id="logo-title">ICARUS</span>
-        <span class="logo-sub" id="logo-sub">Item Comparer</span>
+<!-- ═══════════════════════════  STICKY TOP  ═══════════════════════════ -->
+<div class="sticky-header-wrapper">
+  
+  <!-- ═══════════════════════════  HEADER  ═══════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🪐</span>
+        <div class="logo-text">
+          <span class="logo-title" id="logo-title">ICARUS</span>
+          <span class="logo-sub" id="logo-sub">Item Comparer</span>
+        </div>
+      </div>
+      <p class="header-desc" id="header-desc">Professional comparison tool for prospects in Icarus.</p>
+      
+      <div class="lang-switcher">
+        <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="lang-ua" onclick="setLanguage('ua')">UA</button>
       </div>
     </div>
-    <p class="header-desc" id="header-desc">Professional comparison tool for prospects in Icarus.</p>
-    
-    <div class="lang-switcher">
-      <button class="lang-btn" id="lang-en" onclick="setLanguage('en')">EN</button>
-      <span class="lang-sep">|</span>
-      <button class="lang-btn" id="lang-ua" onclick="setLanguage('ua')">UA</button>
-    </div>
-  </div>
-</header>
+  </header>
 
-<!-- ═══════════════════════════  CATEGORY TABS  ═══════════════════════════ -->
-<nav class="category-nav" id="category-nav">
-  <!-- filled by JS -->
-</nav>
+  <!-- ═══════════════════════════  CATEGORY TABS  ═══════════════════════════ -->
+  <nav class="category-nav" id="category-nav">
+    <!-- filled by JS -->
+  </nav>
+
+</div>
 
 <!-- ═══════════════════════════  MAIN LAYOUT  ═══════════════════════════ -->
 <main class="main-layout">
