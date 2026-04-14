@@ -3,7 +3,7 @@
 A professional, high-performance web tool designed for prospects in the survival game **ICARUS**. This tool allows players to compare stats across all tools, weapons, armor, and animals side-by-side to optimize their loadouts for Every Prospect.
 
 ![Icarus Tool Preview](https://img.shields.io/badge/Status-Premium-orange?style=for-the-badge)
-![Languages](https://img.shields.io/badge/Localization-EN%20%7C%20UA-blue?style=for-the-badge)
+![Languages](https://img.shields.io/badge/Localization-EN%20%7C%20UA%20%7C%20DE-blue?style=for-the-badge)
 
 ## ✨ Key Features
 
@@ -11,7 +11,7 @@ A professional, high-performance web tool designed for prospects in the survival
 - **🛠️ Full Workshop Support**: Includes all items from the Orbital Workshop (Bows, Tools, Armor, Envirosuits, Modules).
 - **🐾 Wildlife & Mounts**: Special categories for Tamed Mounts, Wild Predators (Wolves, Bears, Scorpions), and Animal Care items.
 - **❄️ DLC Content**: Fully updated with content from *New Frontiers (Prometheus)* and *Dangerous Horizons* (2026).
-- **🌍 Multi-language**: Switch between English and Ukrainian with a single click.
+- **🌍 Multi-language**: Switch between English, Ukrainian, and German with a single click.
 - **📱 Responsive & Alive**: Modern, dark-themed UI with glassmorphism effects and micro-animations.
 
 ## 🗂️ Categories
@@ -44,6 +44,7 @@ This is a fully public web-tool. No installation or local cloning is required.
 The tool currently supports:
 - **English** (Default)
 - **Ukrainian** (Українська)
+- **German** (Deutsch)
 
 Language preference is automatically saved to your browser's local storage.
 

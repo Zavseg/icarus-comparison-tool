@@ -679,12 +679,127 @@ body {
   vertical-align: middle;
 }
 
+/* ─── MOBILE JUMP BTN ────────────────────────────────────────── */
+.mobile-jump-btn { display: none; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  .main-layout { grid-template-columns: 260px 1fr; }
+
+/* Desktop / Large Screens */
+@media (min-width: 1201px) {
+  .main-layout { grid-template-columns: 350px 1fr; }
 }
-@media (max-width: 680px) {
-  .main-layout { grid-template-columns: 1fr; }
-  .panel-picker { border-right: none; border-bottom: 1px solid var(--border); }
+
+/* Tablets / Medium Screens */
+@media (max-width: 1200px) {
+  .main-layout { grid-template-columns: 300px 1fr; }
+  .header-desc { font-size: 0.75rem; }
+}
+
+/* Small Tablets / Large Phones */
+@media (max-width: 900px) {
+  .main-layout { grid-template-columns: 280px 1fr; }
+  .logo-title { font-size: 1.5rem; letter-spacing: 2px; }
   .header-desc { display: none; }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+
+  .site-header { padding: 0 16px; }
+  .header-inner { height: 56px; gap: 12px; }
+  .logo-icon { font-size: 24px; }
+  .logo-title { font-size: 1.3rem; }
+  .logo-sub { font-size: 0.6rem; letter-spacing: 1px; }
+
+  /* Category Nav Horizontal Scroll */
+  .category-nav {
+    padding: 8px 16px 12px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    gap: 8px;
+  }
+  .category-nav::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome/Safari */
+  .cat-tab { padding: 6px 14px; font-size: 0.85rem; }
+
+  /* Main Layout Stacking */
+  .main-layout { 
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel { 
+    min-height: auto; 
+    border-right: none; 
+    border-bottom: 1px solid var(--border);
+  }
+  .panel-compare { border-left: none; }
+
+  /* Panel Headers */
+  .panel-header {
+    padding: 16px;
+    top: 56px; /* site-header height */
+  }
+  .panel-title { font-size: 1rem; }
+  
+  /* Item Picker Optimization */
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+  
+  /* Comparison Table Mobile */
+  .compare-content {
+    padding: 12px;
+  }
+  .compare-table {
+    min-width: 450px; /* still need some width, but we make cells tighter */
+  }
+  .cmp-cell {
+    padding: 8px 10px;
+    min-height: 50px;
+  }
+  .cmp-stat-label { font-size: 0.65rem; }
+  .cmp-value-num, .cmp-bar-num { font-size: 1.1rem; }
+
+  /* Hide stats column label on mobile if it's too wide? 
+     Actually let's keep it but make it narrower */
+  .stat-label-cell { width: 100px; padding-right: 10px !important; }
+
+  /* Jump to comparison button (if added in HTML) */
+  .mobile-jump-btn {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(232, 160, 64, 0.4);
+    z-index: 1001;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .mobile-jump-btn:active { transform: scale(0.9); }
+}
+
+@media (max-width: 480px) {
+  .logo-title { letter-spacing: 1px; }
+  .lang-switcher { gap: 4px; }
+  .lang-btn { padding: 4px 6px; font-size: 0.75rem; }
+  
+  .item-grid { grid-template-columns: 1fr; }
+  
+  .cmp-header-label { padding: 10px 8px; }
+  .cmp-item-name { font-size: 0.9rem; }
 }
